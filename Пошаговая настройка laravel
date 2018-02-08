@@ -1,0 +1,299 @@
+bizon@bizon-y ~ $ sudo su
+[sudo] пароль для bizon:
+bizon-y bizon # apt-get update && apt-get install git-core
+Сущ:1 http://archive.canonical.com/ubuntu xenial InRelease
+Сущ:2 http://ppa.launchpad.net/eugenesan/ppa/ubuntu xenial InRelease
+Сущ:3 http://ppa.launchpad.net/maarten-baert/simplescreenrecorder/ubuntu xenial InRelease
+Игн:4 http://packages.linuxmint.com sonya InRelease
+Сущ:5 http://ppa.launchpad.net/notepadqq-team/notepadqq/ubuntu xenial InRelease
+Сущ:6 http://packages.linuxmint.com sonya Release
+Сущ:7 http://ppa.launchpad.net/webupd8team/sublime-text-2/ubuntu xenial InRelease
+Сущ:8 http://archive.ubuntu.com/ubuntu xenial InRelease
+Пол:9 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Пол:10 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Пол:11 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Сущ:13 https://repo.skype.com/deb stable InRelease
+Пол:14 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [713 kB]
+Пол:15 http://archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [663 kB]
+Пол:16 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [581 kB]
+Пол:17 http://archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [539 kB]
+Получено 2.802 kБ за 4с (589 kБ/c)
+Чтение списков пакетов… Готово
+Чтение списков пакетов… Готово
+Построение дерева зависимостей
+Чтение информации о состоянии… Готово
+НОВЫЕ пакеты, которые будут установлены:
+  git-core
+обновлено 0, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 110 пакетов не обновлено.
+Необходимо скачать 1.460 Б архивов.
+После данной операции, объём занятого дискового пространства возрастёт на 8.192 B.
+Пол:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 git-core all 1:2.7.4-0ubuntu1.3 [1.460 B]
+Получено 1.460 Б за 0с (10,6 kБ/c)
+Выбор ранее не выбранного пакета git-core.
+(Чтение базы данных … на данный момент установлено 241728 файлов и каталогов.)
+Подготовка к распаковке …/git-core_1%3a2.7.4-0ubuntu1.3_all.deb …
+Распаковывается git-core (1:2.7.4-0ubuntu1.3) …
+Настраивается пакет git-core (1:2.7.4-0ubuntu1.3) …
+bizon-y bizon # git config --global user.name "yuri"
+bizon-y bizon # git config --global user.email master1414@outlook.com
+bizon-y bizon # git config -l
+user.name=yuri
+user.email=master1414@outlook.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+bizon-y bizon # exit
+exit
+bizon@bizon-y ~ $ cd /home/bizon/laravel-dev/blog/
+bizon@bizon-y ~/laravel-dev/blog $ git init
+Инициализирован пустой репозиторий Git в /home/bizon/laravel-dev/blog/.git/
+bizon@bizon-y ~/laravel-dev/blog $ mc
+Программа 'mc' на данный момент не установлена. Вы можете установить её, выполнив:
+sudo apt install mc
+bizon@bizon-y ~/laravel-dev/blog $ git status
+На ветке master
+
+Начальный коммит
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.env.example
+	.gitattributes
+	.gitignore
+	app/
+	artisan
+	bootstrap/
+	composer.json
+	composer.lock
+	config/
+	database/
+	info-structure.md
+	package.json
+	phpunit.xml
+	public/
+	readme.md
+	resources/
+	routes/
+	server.php
+	storage/
+	tests/
+	webpack.mix.js
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+bizon@bizon-y ~/laravel-dev/blog $ git add .
+bizon@bizon-y ~/laravel-dev/blog $ git status
+На ветке master
+
+Начальный коммит
+
+Изменения, которые будут включены в коммит:
+  (используйте «git rm --cached <файл>…», чтобы убрать из индекса)
+
+	новый файл:    .env.example
+	новый файл:    .gitattributes
+	новый файл:    .gitignore
+	новый файл:    app/Console/Kernel.php
+	новый файл:    app/Exceptions/Handler.php
+	новый файл:    app/Http/Controllers/Auth/ForgotPasswordController.php
+	новый файл:    app/Http/Controllers/Auth/LoginController.php
+	новый файл:    app/Http/Controllers/Auth/RegisterController.php
+	новый файл:    app/Http/Controllers/Auth/ResetPasswordController.php
+	новый файл:    app/Http/Controllers/Controller.php
+	новый файл:    app/Http/Kernel.php
+	новый файл:    app/Http/Middleware/EncryptCookies.php
+	новый файл:    app/Http/Middleware/RedirectIfAuthenticated.php
+	новый файл:    app/Http/Middleware/TrimStrings.php
+	новый файл:    app/Http/Middleware/TrustProxies.php
+	новый файл:    app/Http/Middleware/VerifyCsrfToken.php
+	новый файл:    app/Providers/AppServiceProvider.php
+	новый файл:    app/Providers/AuthServiceProvider.php
+	новый файл:    app/Providers/EventServiceProvider.php
+	новый файл:    app/Providers/RouteServiceProvider.php
+	новый файл:    app/User.php
+  новый файл:    app/Providers/BroadcastServiceProvider.php
+	новый файл:    artisan
+	новый файл:    bootstrap/app.php
+	новый файл:    bootstrap/cache/.gitignore
+	новый файл:    composer.json
+	новый файл:    composer.lock
+	новый файл:    config/app.php
+	новый файл:    config/auth.php
+	новый файл:    config/broadcasting.php
+	новый файл:    config/cache.php
+	новый файл:    config/database.php
+	новый файл:    config/filesystems.php
+	новый файл:    config/mail.php
+	новый файл:    config/queue.php
+	новый файл:    config/services.php
+	новый файл:    config/session.php
+	новый файл:    config/view.php
+	новый файл:    database/.gitignore
+	новый файл:    database/factories/UserFactory.php
+	новый файл:    database/migrations/2014_10_12_000000_create_users_table.php
+	новый файл:    database/migrations/2014_10_12_100000_create_password_resets_table.php
+	новый файл:    database/seeds/DatabaseSeeder.php
+	новый файл:    info-structure.md
+	новый файл:    package.json
+	новый файл:    phpunit.xml
+	новый файл:    public/.htaccess
+	новый файл:    public/css/app.css
+	новый файл:    public/favicon.ico
+	новый файл:    public/index.php
+	новый файл:    public/js/app.js
+	новый файл:    public/robots.txt
+	новый файл:    public/web.config
+	новый файл:    readme.md
+	новый файл:    resources/assets/js/app.js
+	новый файл:    resources/assets/js/bootstrap.js
+	новый файл:    resources/assets/js/components/ExampleComponent.vue
+	новый файл:    resources/assets/sass/_variables.scss
+	новый файл:    resources/assets/sass/app.scss
+	новый файл:    resources/lang/en/auth.php
+	новый файл:    resources/lang/en/pagination.php
+	новый файл:    resources/lang/en/passwords.php
+	новый файл:    resources/lang/en/validation.php
+	новый файл:    resources/views/welcome.blade.php
+	новый файл:    routes/api.php
+	новый файл:    routes/channels.php
+	новый файл:    routes/console.php
+	новый файл:    routes/web.php
+	новый файл:    server.php
+	новый файл:    storage/app/.gitignore
+	новый файл:    storage/app/public/.gitignore
+	новый файл:    storage/framework/.gitignore
+	новый файл:    storage/framework/cache/.gitignore
+	новый файл:    storage/framework/sessions/.gitignore
+	новый файл:    storage/framework/testing/.gitignore
+	новый файл:    storage/framework/views/.gitignore
+	новый файл:    storage/logs/.gitignore
+	новый файл:    tests/CreatesApplication.php
+	новый файл:    tests/Feature/ExampleTest.php
+	новый файл:    tests/TestCase.php
+	новый файл:    tests/Unit/ExampleTest.php
+	новый файл:    webpack.mix.js
+
+bizon@bizon-y ~/laravel-dev/blog $ git commit -m "Первый комит"
+[master (корневой коммит) 6d5c489] Первый комит
+ 82 files changed, 6970 insertions(+)
+ create mode 100644 .env.example
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 app/Console/Kernel.php
+ create mode 100644 app/Exceptions/Handler.php
+ create mode 100644 app/Http/Controllers/Auth/ForgotPasswordController.php
+ create mode 100644 app/Http/Controllers/Auth/LoginController.php
+ create mode 100644 app/Http/Controllers/Auth/RegisterController.php
+ create mode 100644 app/Http/Controllers/Auth/ResetPasswordController.php
+ create mode 100644 app/Http/Controllers/Controller.php
+ create mode 100644 app/Http/Kernel.php
+ create mode 100644 app/Http/Middleware/EncryptCookies.php
+ create mode 100644 app/Http/Middleware/RedirectIfAuthenticated.php
+ create mode 100644 app/Http/Middleware/TrimStrings.php
+ create mode 100644 app/Http/Middleware/TrustProxies.php
+ create mode 100644 app/Http/Middleware/VerifyCsrfToken.php
+ create mode 100644 app/Providers/AppServiceProvider.php
+ create mode 100644 app/Providers/AuthServiceProvider.php
+ create mode 100644 app/Providers/BroadcastServiceProvider.php
+ create mode 100644 app/Providers/EventServiceProvider.php
+ create mode 100644 app/Providers/RouteServiceProvider.php
+ create mode 100644 app/User.php
+ create mode 100755 artisan
+ create mode 100644 bootstrap/app.php
+ create mode 100644 bootstrap/cache/.gitignore
+ create mode 100644 composer.json
+ create mode 100644 composer.lock
+ create mode 100644 config/app.php
+ create mode 100644 config/auth.php
+ create mode 100644 config/broadcasting.php
+ create mode 100644 config/cache.php
+ create mode 100644 config/database.php
+ create mode 100644 config/filesystems.php
+ create mode 100644 config/mail.php
+ create mode 100644 config/queue.php
+ create mode 100644 config/services.php
+ create mode 100644 config/session.php
+ create mode 100644 config/view.php
+ create mode 100644 database/.gitignore
+ create mode 100644 database/factories/UserFactory.php
+ create mode 100644 database/migrations/2014_10_12_000000_create_users_table.php
+ create mode 100644 database/migrations/2014_10_12_100000_create_password_resets_table.php
+ create mode 100644 database/seeds/DatabaseSeeder.php
+ create mode 100644 info-structure.md
+ create mode 100644 package.json
+ create mode 100644 phpunit.xml
+ create mode 100644 public/.htaccess
+ create mode 100644 public/css/app.css
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/index.php
+ create mode 100644 public/js/app.js
+ create mode 100644 public/robots.txt
+ create mode 100644 public/web.config
+ create mode 100644 readme.md
+ create mode 100644 resources/assets/js/app.js
+ create mode 100644 resources/assets/js/bootstrap.js
+ create mode 100644 resources/assets/js/components/ExampleComponent.vue
+ create mode 100644 resources/assets/sass/_variables.scss
+ create mode 100644 resources/assets/sass/app.scss
+ create mode 100644 resources/lang/en/auth.php
+ create mode 100644 resources/lang/en/pagination.php
+ create mode 100644 resources/lang/en/passwords.php
+ create mode 100644 resources/lang/en/validation.php
+ create mode 100644 resources/views/welcome.blade.php
+ create mode 100644 routes/api.php
+ create mode 100644 routes/channels.php
+ create mode 100644 routes/console.php
+ create mode 100644 routes/web.php
+ create mode 100644 server.php
+ create mode 100644 storage/app/.gitignore
+ create mode 100644 storage/app/public/.gitignore
+ create mode 100644 storage/framework/.gitignore
+ create mode 100644 storage/framework/cache/.gitignore
+ create mode 100644 storage/framework/sessions/.gitignore
+ create mode 100644 storage/framework/testing/.gitignore
+ create mode 100644 storage/framework/views/.gitignore
+ create mode 100644 storage/logs/.gitignore
+ create mode 100644 tests/CreatesApplication.php
+ create mode 100644 tests/Feature/ExampleTest.php
+ create mode 100644 tests/TestCase.php
+ create mode 100644 tests/Unit/ExampleTest.php
+ create mode 100644 webpack.mix.js
+bizon@bizon-y ~/laravel-dev/blog $ git log
+commit 6d5c48923113c320f01f7a17a79053ae7a1c27ab
+Author: Yuri <master1414@outlook.com>
+Date:   Thu Feb 8 01:14:33 2018 +0200
+
+    Первый комит
+bizon@bizon-y ~/laravel-dev/blog $ git remote show
+bizon@bizon-y ~/laravel-dev/blog $ git remote add origin https://github.com/master1414/blog.git
+bizon@bizon-y ~/laravel-dev/blog $ git push origin master
+Username for 'https://github.com': master1414
+Password for 'https://master1414@github.com':
+Подсчет объектов: 111, готово.
+Delta compression using up to 2 threads.
+Сжатие объектов: 100% (94/94), готово.
+Запись объектов: 100% (111/111), 168.74 KiB | 0 bytes/s, готово.
+Total 111 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/master1414/blog.git
+ * [new branch]      master -> master
+bizon@bizon-y ~/laravel-dev/blog $ cp .env.example .env
+bizon@bizon-y ~/laravel-dev/blog $ php artisan key:generate
+Application key [base64:cr1x0g9bcT/jEftUmn7Dvn+jBCnFIOyJqOkmw73vQrs=] set successfully.
+
+bizon@bizon-y ~/laravel-dev/blog $ php artisan serve
+Laravel development server started: <http://127.0.0.1:8000>
+[Thu Feb  8 02:12:37 2018] 127.0.0.1:45112 [200]: /favicon.ico
+
+после любых измменений в файлах .env и config/app.php делаем зброс кеша $ php artisan config:cache
+bizon@bizon-y ~/laravel-dev/blog $ php artisan config:cache
+Configuration cache cleared!
+Configuration cached successfully!
+bizon@bizon-y ~/laravel-dev/blog $ php artisan migrate
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table
+bizon@bizon-y ~/laravel-dev/blog $

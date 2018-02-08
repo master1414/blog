@@ -1,0 +1,7 @@
+php artisan make:controller Admin/DashboardController - создать контроллер
+php artisan route:list - просмотр роутов 
+после создания контроллера создаем группу маршрутов для административной части в файле routes/web.php
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth']], function(){}
+Route::get('/','DashboardController@dashboard')->name('admin.index');//Роут контроллера
+);
+затем в контроллере создаем экшен
